@@ -25,14 +25,12 @@ public class CarDealership {
 
     }
 
-    public void produceCar() {
+    public synchronized void produceCar() {
         try {
             Thread.sleep(PRODUCE_TIME);
             cars.add(new Car());
             System.out.println(Thread.currentThread().getName() + " выпустил 1 авто");
-            synchronized (this) {
-                notify();
-            }
+            notify();
         } catch (InterruptedException e) {
                 e.printStackTrace();
         }
