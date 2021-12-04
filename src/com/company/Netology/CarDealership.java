@@ -15,7 +15,7 @@ public class CarDealership {
     private final Lock lock = new ReentrantLock();
     private final Condition condition = lock.newCondition();
 
-    public synchronized void buyCar() {
+    public void buyCar() {
         try {
             lock.lock();
             System.out.println(Thread.currentThread().getName() + " зашел в автосалон");

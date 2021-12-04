@@ -9,9 +9,6 @@ public class Main {
             new Buyer("Покупатель " + i, carDealership).start();
         }
         new Manufacturer("Производитель TOYTA", carDealership).start();
-
-
-
     }
 
 }
